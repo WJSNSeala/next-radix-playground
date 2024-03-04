@@ -8,6 +8,11 @@ export default function TypographyPage() {
           Dialog
         </button>
       </Link>
+      <Link href="/primitives/alert-dialog">
+        <button className={"rounded-md border px-4 border-black"}>
+          Alert Dialog
+        </button>
+      </Link>
     </div>
   );
 }

@@ -14,6 +14,11 @@ export default function MainPage() {
           layout
         </button>
       </Link>
+      <Link href="/components">
+        <button className={"rounded-md border px-4 border-black"}>
+          components
+        </button>
+      </Link>
       <Link href="/primitives">
         <button className={"rounded-md border px-4 border-black"}>
           primitives
