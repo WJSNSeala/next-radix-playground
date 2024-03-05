@@ -1,31 +1,41 @@
 import Link from "next/link";
 
+function ComponentLink({ href }: { href: string }) {
+  return (
+    <Link href={"/components/" + href}>
+      <button className={"rounded-md border px-4 border-black w-32"}>
+        {href}
+      </button>
+    </Link>
+  );
+}
+
 export default function TypographyPage() {
+  const components = [
+    "aspect-ratio",
+    "avatar",
+    "badge",
+    "button",
+    "callout",
+    "card",
+    "checkbox",
+    "context-menu",
+    "dialog",
+    "dropdown-menu",
+    "hover-card",
+    "icon-button",
+    "inset",
+    "popover",
+  ];
+
   return (
     <div className={"flex flex-col gap-3 items-center w-full"}>
-      <Link href="/components/aspect-ratio">
-        <button className={"rounded-md border px-4 border-black"}>
-          Aspect Ratio
-        </button>
-      </Link>
-      <Link href="/components/avatar">
-        <button className={"rounded-md border px-4 border-black"}>
-          Avatar
-        </button>
-      </Link>
-      <Link href="/components/badge">
-        <button className={"rounded-md border px-4 border-black"}>badge</button>
-      </Link>
-      <Link href="/components/Button">
-        <button className={"rounded-md border px-4 border-black"}>
-          Button
-        </button>
-      </Link>
-      <Link href="/components/callout">
-        <button className={"rounded-md border px-4 border-black"}>
-          callout
-        </button>
-      </Link>
+      <h1>Components</h1>
+      <div className={"flex flex-col gap-3"}>
+        {components.map((component) => (
+          <ComponentLink key={component} href={component} />
+        ))}
+      </div>
     </div>
   );
 }
