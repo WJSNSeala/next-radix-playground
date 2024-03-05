@@ -26,6 +26,8 @@ export default function TypographyPage() {
     "icon-button",
     "inset",
     "popover",
+    "radio-group",
+    "scroll-area",
   ];
 
   return (
